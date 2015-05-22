@@ -8,8 +8,11 @@ namespace pythonIntegration {
     class Program {
         static void Main(string[] args)
         {
-            string python = "import subprocess " + Environment.NewLine + 
-                            "output = subprocess.check_output(['node', '-p', '(function(){return \\'this is ridiculous\\'})()'])" + Environment.NewLine +
+            Console.WriteLine("I need to break out of this statically typed straight-jacket!!");
+
+            string python = "print('What?!? Python is also strongly typed?!?')" + Environment.NewLine + 
+                            "import subprocess " + Environment.NewLine + 
+                            "output = subprocess.check_output(['node', '-p', 'console.log(\\'I hate you Javascript\\');(function(){return \\'this is ridiculous\\'})()'])" + Environment.NewLine +
                             "print(output)";
 
             string output = new PythonCode().Run(python);
