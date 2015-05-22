@@ -8,7 +8,9 @@ namespace pythonIntegration {
     class Program {
         static void Main(string[] args)
         {
-            string python = "print('hello world')";
+            string python = "import subprocess " + Environment.NewLine + 
+                            "output = subprocess.check_output(['node', '-p', '(function(){return \\'this is ridiculous\\'})()'])" + Environment.NewLine +
+                            "print(output)";
 
             string output = new PythonCode().Run(python);
 
