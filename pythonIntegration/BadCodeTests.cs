@@ -22,6 +22,8 @@ namespace pythonIntegration {
                 var badCode = new BadCode();
                 string consoleOutput = badCode.Run();
                 _lines = consoleOutput.Trim().Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+
+                _output.WriteLine(consoleOutput);
             }
 
             [Fact]
