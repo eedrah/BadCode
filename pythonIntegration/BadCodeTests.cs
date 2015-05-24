@@ -49,6 +49,12 @@ namespace pythonIntegration {
                 string javascriptLine = _lines[4];
                 Assert.Equal("Javascript. What have we done?", javascriptLine);
             }
+
+            [Fact]
+            public void RubyOutputShouldBeCorrect() {
+                string rubyLine = _lines[6];
+                Assert.Equal("Once more unto the breach, dear Ruby, once more...", rubyLine);
+            }
         }
     }
 }
