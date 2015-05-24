@@ -31,6 +31,12 @@ namespace pythonIntegration {
 
                 Assert.Equal(string.Empty, blankString, ignoreWhiteSpaceDifferences: true);
             }
+
+            [Fact]
+            public void CSharpOutputShouldBeCorrect() {
+                string cSharpLine = _lines[0];
+                Assert.Equal("C# is so 1999...", cSharpLine);
+            }
         }
     }
 }
