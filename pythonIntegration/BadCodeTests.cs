@@ -43,6 +43,12 @@ namespace pythonIntegration {
                 string pythonLine = _lines[2];
                 Assert.Equal("What?!? Python is also strongly typed?!?", pythonLine);
             }
+
+            [Fact]
+            public void JavascriptOutputShouldBeCorrect() {
+                string javascriptLine = _lines[4];
+                Assert.Equal("Javascript. What have we done?", javascriptLine);
+            }
         }
     }
 }
