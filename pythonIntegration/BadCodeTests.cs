@@ -37,6 +37,12 @@ namespace pythonIntegration {
                 string cSharpLine = _lines[0];
                 Assert.Equal("C# is so 1999...", cSharpLine);
             }
+
+            [Fact]
+            public void PythonOutputShouldBeCorrect() {
+                string pythonLine = _lines[2];
+                Assert.Equal("What?!? Python is also strongly typed?!?", pythonLine);
+            }
         }
     }
 }
